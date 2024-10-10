@@ -1,0 +1,95 @@
+ALLOW CIO
+
+CMAIN
+
+    ; Inputting the first argument from the terminal application
+    CARG 1
+
+    ; Checking whether the command was --version
+    MATCH MACRO CARG_DATA,--version
+        ; Output the version
+        CO LCT (Linux Color Tool) - v1.0 : Zile compiles\n\n
+    END_BLOCK
+
+    ; Checking for colors
+    ; Checking for color black
+    MATCH MACRO CARG_DATA,0
+        CO \033[30m
+    END_BLOCK
+
+    ; Checking for color blue
+    MATCH MACRO CARG_DATA,1
+        CO \033[34m
+    END_BLOCK
+
+    ; Checking for color green
+    MATCH MACRO CARG_DATA,2
+        CO \033[32m
+    END_BLOCK
+
+    ; Checking for color aqua
+    MATCH MACRO CARG_DATA,3
+        CO \033[36m
+    END_BLOCK
+
+    ; Checking for color red
+    MATCH MACRO CARG_DATA,4
+        CO \033[31m
+    END_BLOCK
+
+    ; Checking for color purple
+    MATCH MACRO CARG_DATA,5
+        CO \033[35m
+    END_BLOCK
+
+    ; Checking for color yellow
+    MATCH MACRO CARG_DATA,6
+        CO \033[33m
+    END_BLOCK
+
+    ; Checking for color white
+    MATCH MACRO CARG_DATA,7
+        CO \033[37m
+    END_BLOCK
+
+    ; Checking for color gray
+    MATCH MACRO CARG_DATA,8
+        CO \033[90m
+    END_BLOCK
+
+    ; Checking for light blue
+    MATCH MACRO CARG_DATA,9
+        CO \033[94m
+    END_BLOCK
+
+    ; Checking for light green
+    MATCH MACRO CARG_DATA,A
+        CO \033[92m
+    END_BLOCK
+
+    ; Checking for light aqua
+    MATCH MACRO CARG_DATA,B
+        CO \033[96m
+    END_BLOCK
+
+    ; Checking for light red
+    MATCH MACRO CARG_DATA,C
+        CO \033[91m
+    END_BLOCK
+
+    ; Checking for light purple
+    MATCH MACRO CARG_DATA,D
+        CO \033[95m
+    END_BLOCK
+
+    ; Checking for light yellow
+    MATCH MACRO CARG_DATA,E
+        CO \033[93m
+    END_BLOCK
+
+    ; Checking for bright white
+    MATCH MACRO CARG_DATA,F
+        CO \033[97m
+    END_BLOCK
+
+ECMAIN
