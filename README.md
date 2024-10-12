@@ -51,8 +51,8 @@ download and extract this repo first
 open the directory where the src dir and zile binary is present.
 just execute this command if already has g++
 ```bash
-./zile icolor.zile
-g++ icolor.zile.cpp -o color
+./zile lcolor.zile
+g++ lcolor.zile.cpp -o color
 ./color --version
 ```
 
